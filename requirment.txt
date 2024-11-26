@@ -1,0 +1,12 @@
+# For Capturing real time feature from network
+fastapi
+uvicorn
+scapy
+
+# For Training and Testing Model
+pandas
+matplotlib
+numpy
+scikit-learn
+imbalanced-learn
+tensorflow
