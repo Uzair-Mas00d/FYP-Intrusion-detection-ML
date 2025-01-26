@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Network Security Detection</title>
+    <style>
+        /* Modern CSS with variables and animations */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #10b981 100%);
+            --secondary-gradient: linear-gradient(45deg, #1e293b, #0f172a);
+            --accent: #10b981;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--secondary-gradient);
+            color: #f8fafc;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Animated background particles */
+        .particles {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #1e293b33 0%, #0f172a 100%);
+        }
+
+        header {
+            position: relative;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            background: var(--primary-gradient);
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #fff 30%, #d1fae5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: -6rem auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(0);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(99, 102, 241, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+                        0 8px 10px -6px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card h3::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.3));
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        footer a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        footer a:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+
+            .card {
+                min-height: auto;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <header>
+        <h1>Network Security Detection</h1>
+        <p>Next-Generation Network Security Platform</p>
+    </header>
+
+    <main>
+        <div class="info-cards">
+            <div class="card">
+                <div class="card-icon">🛡️</div>
+                <h3>Real-time Threat Monitoring</h3>
+                <p>Advanced AI-powered surveillance detecting anomalies and malicious patterns in network traffic instantly.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🤖</div>
+                <h3>Neural Network Analysis</h3>
+                <p>Deep learning models trained on threat data for unparalleled detection accuracy.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3>Zero-Day Protection</h3>
+                <p>Proactive defense system anticipating emerging threats before they become vulnerabilities.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Cloud-Native Architecture</h3>
+                <p>Scalable solution designed for modern distributed infrastructure and microservices.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://github.com/Uzair-Mas00d/FYP-Intrusion-detection-ML" target="_blank">Explore the Code</a>
+        </p>
+    </footer>
+</body>
+</html>

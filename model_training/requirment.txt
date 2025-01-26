@@ -1,0 +1,9 @@
+pandas
+matplotlib
+numpy
+ipykernel
+scikit-learn
+imbalanced-learn
+tensorflow
+tf2onnx
+onnx
